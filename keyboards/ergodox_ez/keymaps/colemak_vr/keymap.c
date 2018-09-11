@@ -31,22 +31,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TAB,              KC_Q,            KC_W,            KC_F,              KC_P,               KC_G,    KC_TRANSPARENT,
        OSM(MOD_LCTL),       KC_A,            KC_R,            LT(2,KC_S),        LT(3,KC_T),         KC_D,    /*...........*/
        OSM(MOD_LSFT),       CTL_T(KC_Z),     KC_X,            KC_C,              KC_V,               KC_B,    KC_TRANSPARENT,
-       OSL(2),              MEH_T(KC_NO),    ALL_T(KC_NO),    ALT_T(KC_LEFT),    GUI_T(KC_DOWN),
+       OSL(2),              OSM(MOD_MEH),    OSM(MOD_HYPR),    OSM(MOD_LALT),    OSM(MOD_LGUI),
 
                                                      KC_TRANSPARENT,           KC_TRANSPARENT,
                                  /*.....*/           /*...........*/           KC_TRANSPARENT,
-                                 KC_SPACE,           LGUI(KC_SPACE),           LCTL(KC_SPACE),
+                                 KC_SPACE,           KC_BSPC,                   LCTL(KC_SPACE),
 
        // right hand
        KC_TRANSPARENT,    KC_6,             KC_7,                  KC_8,                  KC_9,      KC_0,                 KC_MINUS,
        KC_TRANSPARENT,    KC_J,             KC_L,                  KC_U,                  KC_Y,      KC_SCOLON,            KC_BSLASH,
        /*...........*/    KC_H,             LT(3,KC_N),            LT(2,KC_E),            KC_I,      KC_O,                 RCTL_T(KC_QUOTE),
-       KC_TRANSPARENT,    KC_K,             KC_M,                  KC_COMMA,              KC_DOT,    RCTL_T(KC_SLASH),     OSM(MOD_RSFT),
-       GUI_T(KC_UP),    RALT_T(KC_RIGHT),    ALL_T(KC_LBRACKET),    MEH_T(KC_RBRACKET),    OSL(3),
+       KC_TRANSPARENT,    KC_K,             KC_M,                  KC_COMMA,              KC_DOT,    RCTL_T(KC_SLASH),     OSM(MOD_LSFT),
+       OSM(MOD_LGUI),     OSM(MOD_LALT),    OSM(MOD_HYPR),         OSM(MOD_MEH),          OSL(3),
 
        KC_TRANSPARENT,           KC_TRANSPARENT,
        KC_TRANSPARENT,           /*...........*/           /*.....*/
-       RCTL(KC_SPACE),           LGUI(KC_SPACE),           KC_SPACE),
+       RCTL(KC_SPACE),           KC_ENT,           KC_SPACE),
 
   [1] = LAYOUT_ergodox(   //layer 1 : qwerty
         // left hand
@@ -54,22 +54,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,              KC_Q,            KC_W,            KC_E,              KC_R,               KC_T,    KC_TRANSPARENT,
         OSM(MOD_LCTL),       KC_A,            KC_S,            LT(2,KC_D),        LT(3,KC_F),         KC_G,    /*...........*/
         OSM(MOD_LSFT),       CTL_T(KC_Z),     KC_X,            KC_C,              KC_V,               KC_B,    KC_TRANSPARENT,
-        OSL(2),              MEH_T(KC_NO),    ALL_T(KC_NO),    ALT_T(KC_LEFT),    GUI_T(KC_DOWN),
+        OSL(2),              OSM(MOD_MEH),    OSM(MOD_HYPR),    OSM(MOD_LALT),    OSM(MOD_LGUI),
 
-                                                    KC_TRANSPARENT,      KC_TRANSPARENT,
-                                     /*.....*/      /*...........*/      KC_TRANSPARENT,
-                                     KC_SPACE,      LGUI(KC_SPACE),      LCTL(KC_SPACE),
+                                                 KC_TRANSPARENT,      KC_TRANSPARENT,
+                                  /*.....*/      /*...........*/      KC_TRANSPARENT,
+                                  KC_SPACE,      KC_BSPC,              LCTL(KC_SPACE),
 
         // right hand
         KC_TRANSPARENT,    KC_6,             KC_7,                  KC_8,                  KC_9,                KC_0,                KC_MINUS,
         KC_TRANSPARENT,    KC_Y,             KC_U,                  KC_I,                  KC_O,                KC_P,                KC_BSLASH,
         /*...........*/    KC_H,             LT(3,KC_J),            LT(2,KC_K),            KC_L,                KC_SCOLON,           RCTL_T(KC_QUOTE),
-        KC_TRANSPARENT,    KC_N,             KC_M,                  KC_COMMA,              KC_DOT,              RCTL_T(KC_SLASH),    OSM(MOD_RSFT),
-        GUI_T(KC_UP),    RALT_T(KC_RIGHT),    ALL_T(KC_LBRACKET),    MEH_T(KC_RBRACKET),    OSL(3),
+        KC_TRANSPARENT,    KC_N,             KC_M,                  KC_COMMA,              KC_DOT,              RCTL_T(KC_SLASH),    OSM(MOD_LSFT),
+        OSM(MOD_LGUI),     OSM(MOD_LALT),    OSM(MOD_HYPR),         OSM(MOD_MEH),          OSL(3),
 
         KC_TRANSPARENT,    KC_TRANSPARENT,
         KC_TRANSPARENT,    /*...........*/    /*....*/
-        RCTL(KC_SPACE),    LGUI(KC_SPACE),    KC_SPACE),
+        RCTL(KC_SPACE),    KC_ENT,    KC_SPACE),
 
   [2] = LAYOUT_ergodox(   //layer 2 : navigation
         // left hand
