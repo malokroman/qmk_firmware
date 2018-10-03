@@ -27,97 +27,141 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT_ergodox(   //layer 0 : default, colemak
        // left hand
-       KC_GRAVE,            KC_1,            KC_2,            KC_3,              KC_4,               KC_5,    KC_TRANSPARENT,
-       KC_TAB,              KC_Q,            KC_W,            KC_F,              KC_P,               KC_G,    KC_TRANSPARENT,
-       OSM(MOD_LCTL),       KC_A,            KC_R,            LT(2,KC_S),        LT(3,KC_T),         KC_D,    /*...........*/
-       OSM(MOD_LSFT),       CTL_T(KC_Z),     KC_X,            KC_C,              KC_V,               KC_B,    KC_TRANSPARENT,
+       KC_ESC,              KC_1,            KC_2,            KC_3,              KC_4,               KC_5,          _______,
+       KC_TAB,              KC_Q,            KC_W,            KC_F,              KC_P,               KC_G,          _______,
+       OSM(MOD_LCTL),       KC_A,            LT(4,KC_R),      LT(2,KC_S),        LT(3,KC_T),         LT(3,KC_D),    /*...........*/
+       OSM(MOD_LSFT),       CTL_T(KC_Z),     KC_X,            KC_C,              KC_V,               KC_B,          _______,
        OSL(2),              OSM(MOD_MEH),    OSM(MOD_HYPR),    OSM(MOD_LALT),    OSM(MOD_LGUI),
 
-                                                     KC_TRANSPARENT,           KC_TRANSPARENT,
-                                 /*.....*/           /*...........*/           KC_TRANSPARENT,
-                                 KC_SPACE,           KC_BSPC,                   LCTL(KC_SPACE),
+                                                      _______,                  _______,
+                                 /*.....*/            /*...........*/           _______,
+                                 GUI_T(KC_SPACE),     KC_BSPC,                  LGUI(LCTL(KC_SPACE)),
 
        // right hand
-       KC_TRANSPARENT,    KC_6,             KC_7,                  KC_8,                  KC_9,      KC_0,                 KC_MINUS,
-       KC_TRANSPARENT,    KC_J,             KC_L,                  KC_U,                  KC_Y,      KC_SCOLON,            KC_BSLASH,
-       /*...........*/    KC_H,             LT(3,KC_N),            LT(2,KC_E),            KC_I,      KC_O,                 RCTL_T(KC_QUOTE),
-       KC_TRANSPARENT,    KC_K,             KC_M,                  KC_COMMA,              KC_DOT,    RCTL_T(KC_SLASH),     OSM(MOD_LSFT),
+       _______,           _______,          LCTL(KC_DOWN),         LCTL(KC_LEFT),         LCTL(KC_RIGHT),    LCTL(KC_UP),          _______,
+       _______,           KC_J,             KC_L,                  KC_U,                  KC_Y,              KC_SCOLON,            KC_BSLASH,
+       /*...........*/    LT(3,KC_H),       LT(3,KC_N),            LT(2,KC_E),            KC_I,              KC_O,                 RCTL_T(KC_QUOTE),
+       _______,           KC_K,             KC_M,                  KC_COMMA,              KC_DOT,            RCTL_T(KC_SLASH),     OSM(MOD_LSFT),
        OSM(MOD_LGUI),     OSM(MOD_LALT),    OSM(MOD_HYPR),         OSM(MOD_MEH),          OSL(3),
 
-       KC_TRANSPARENT,           KC_TRANSPARENT,
-       KC_TRANSPARENT,           /*...........*/           /*.....*/
-       RCTL(KC_SPACE),           KC_ENT,           KC_SPACE),
+       _______,                  _______,
+       _______,                  /*...........*/           /*.....*/
+       RGUI(RCTL(KC_SPACE)),     KC_ENT,           KC_SPACE),
 
   [1] = LAYOUT_ergodox(   //layer 1 : qwerty
         // left hand
-        KC_GRAVE,            KC_1,            KC_2,            KC_3,              KC_4,               KC_5,    KC_TRANSPARENT,
-        KC_TAB,              KC_Q,            KC_W,            KC_E,              KC_R,               KC_T,    KC_TRANSPARENT,
-        OSM(MOD_LCTL),       KC_A,            KC_S,            LT(2,KC_D),        LT(3,KC_F),         KC_G,    /*...........*/
-        OSM(MOD_LSFT),       CTL_T(KC_Z),     KC_X,            KC_C,              KC_V,               KC_B,    KC_TRANSPARENT,
-        OSL(2),              OSM(MOD_MEH),    OSM(MOD_HYPR),    OSM(MOD_LALT),    OSM(MOD_LGUI),
+        _______,             KC_1,            KC_2,            KC_3,              KC_4,               KC_5,          _______,
+        _______,             KC_Q,            KC_W,            KC_E,              KC_R,               KC_T,          _______,
+        _______,             KC_A,            LT(4,KC_S),      LT(2,KC_D),        LT(3,KC_F),         LT(3,KC_G),    /*...........*/
+        _______,             CTL_T(KC_Z),     KC_X,            KC_C,              KC_V,               KC_B,          _______,
+        OSL(2),              _______,         _______,         _______,           _______,
 
-                                                 KC_TRANSPARENT,      KC_TRANSPARENT,
-                                  /*.....*/      /*...........*/      KC_TRANSPARENT,
-                                  KC_SPACE,      KC_BSPC,              LCTL(KC_SPACE),
+                                                 _______,            _______,
+                                  /*.....*/      /*..........*/      _______,
+                                  _______,       _______,            _______,
 
         // right hand
-        KC_TRANSPARENT,    KC_6,             KC_7,                  KC_8,                  KC_9,                KC_0,                KC_MINUS,
-        KC_TRANSPARENT,    KC_Y,             KC_U,                  KC_I,                  KC_O,                KC_P,                KC_BSLASH,
-        /*...........*/    KC_H,             LT(3,KC_J),            LT(2,KC_K),            KC_L,                KC_SCOLON,           RCTL_T(KC_QUOTE),
-        KC_TRANSPARENT,    KC_N,             KC_M,                  KC_COMMA,              KC_DOT,              RCTL_T(KC_SLASH),    OSM(MOD_LSFT),
-        OSM(MOD_LGUI),     OSM(MOD_LALT),    OSM(MOD_HYPR),         OSM(MOD_MEH),          OSL(3),
+        _______,           KC_6,             KC_7,                  KC_8,                  KC_9,                KC_0,                KC_MINUS,
+        _______,           KC_Y,             KC_U,                  KC_I,                  KC_O,                KC_P,                KC_BSLASH,
+        /*...........*/    LT(3,KC_H),       LT(3,KC_J),            LT(2,KC_K),            KC_L,                KC_SCOLON,           RCTL_T(KC_QUOTE),
+        _______,           KC_N,             KC_M,                  KC_COMMA,              KC_DOT,              RCTL_T(KC_SLASH),    OSM(MOD_LSFT),
+        _______,           _______,          _______,               _______,               OSM(3),
 
-        KC_TRANSPARENT,    KC_TRANSPARENT,
-        KC_TRANSPARENT,    /*...........*/    /*....*/
-        RCTL(KC_SPACE),    KC_ENT,    KC_SPACE),
+        _______,           _______,
+        _______,           /*...........*/    /*....*/
+        _______,           _______,           _______),
 
   [2] = LAYOUT_ergodox(   //layer 2 : navigation
         // left hand
-        KC_TRANSPARENT,    KC_TRANSPARENT,    KC_MS_BTN4,      KC_MS_BTN3,          KC_MS_BTN5,      KC_TRANSPARENT,    KC_TRANSPARENT,
-        KC_TRANSPARENT,    KC_MS_WH_DOWN,     KC_MS_BTN1,      KC_MS_UP,            KC_MS_BTN2,      KC_MS_WH_UP,       KC_TRANSPARENT,
-        KC_TRANSPARENT,    KC_MS_WH_LEFT,     KC_MS_LEFT,      KC_MS_DOWN,          KC_MS_RIGHT,     KC_MS_WH_RIGHT,    /*...........*/
-        KC_ENTER,          KC_TRANSPARENT,    KC_MS_ACCEL0,    KC_MS_ACCEL1,        KC_MS_ACCEL2,    KC_TRANSPARENT,    KC_TRANSPARENT,
-        KC_TRANSPARENT,    KC_TRANSPARENT,    LGUI(KC_T),      LGUI(LSFT(KC_T)),    LGUI(KC_W),
+        _______,           LCTL(KC_LEFT),       LCTL(LSFT(KC_TAB)),      KC_MS_BTN3,             LCTL(KC_TAB),      LCTL(KC_RIGHT),        _______,
+        _______,           KC_MS_WH_DOWN,       KC_MS_BTN1,              KC_MS_UP,               KC_MS_BTN2,        KC_MS_WH_UP,           _______,
+        _______,           KC_MS_WH_LEFT,       KC_MS_LEFT,              KC_MS_DOWN,             KC_MS_RIGHT,       KC_MS_WH_RIGHT,        /*...........*/
+        LSFT(KC_ENTER),    XXXXXXX,             KC_MS_ACCEL0,            KC_MS_ACCEL1,           KC_MS_ACCEL2,      XXXXXXX,               _______,
+        _______,           _______,             LGUI(KC_T),              LGUI(KC_W),             LGUI(LSFT(KC_T)),
 
-                                                  KC_TRANSPARENT,    KC_TRANSPARENT,
-                                                                     KC_TRANSPARENT,
-                                    KC_ESCAPE,    TO(0),             KC_TRANSPARENT,
+                                                  _______,           _______,
+                                                                     _______,
+                                    KC_ESCAPE,    TO(0),             _______,
 
         // right hand
-        KC_TRANSPARENT,    KC_TRANSPARENT,      LCTL(KC_DOWN),    LCTL(KC_LEFT),         LCTL(KC_RIGHT),    LCTL(KC_UP),       KC_TRANSPARENT,
-        LGUI(KC_C),        KC_TRANSPARENT,      KC_WWW_BACK,      LCTL(LSFT(KC_TAB)),    LCTL(KC_TAB),      KC_WWW_FORWARD,    KC_TRANSPARENT,
-        /*.......*/        KC_BSPACE,           KC_LEFT,          KC_DOWN,               KC_UP,             KC_RIGHT,          KC_TRANSPARENT,
-        LGUI(KC_V),        KC_TRANSPARENT,      KC_HOME,          KC_PGDOWN,             KC_PGUP,           KC_END,            KC_ENTER,
-        LGUI(KC_W),        LGUI(LSFT(KC_T)),    RGUI(KC_T),       KC_TRANSPARENT,        TO(3),
+        _______,           _______,             LCTL(KC_DOWN),    LCTL(KC_LEFT),         LCTL(KC_RIGHT),    LCTL(KC_UP),       _______,
+        LGUI(KC_C),        XXXXXXX,             KC_WWW_BACK,      LCTL(LSFT(KC_TAB)),    LCTL(KC_TAB),      KC_WWW_FORWARD,    _______,
+        /*.......*/        KC_BSPACE,           KC_LEFT,          KC_DOWN,               KC_UP,             KC_RIGHT,          _______,
+        LGUI(KC_V),        XXXXXXX,             KC_HOME,          KC_PGDOWN,             KC_PGUP,           KC_END,            OSM(MOD_LSFT),
+        _______,           _______,             _______,          _______,               _______,
 
-        KC_TRANSPARENT,    KC_TRANSPARENT,
-        KC_TRANSPARENT,
-        KC_TRANSPARENT,    TO(1),             KC_ENTER),
+        _______,           _______,
+        _______,
+        _______,           TO(1),             KC_ENTER),
 
   [3] = LAYOUT_ergodox(
         // left hand
         KC_ESCAPE,         KC_F1,             KC_F2,             KC_F3,          KC_F4,          KC_F5,       KC_F6,
-        KC_TRANSPARENT,    KC_EXLM,           KC_AT,             KC_LCBR,        KC_RCBR,        KC_PIPE,     KC_TRANSPARENT,
-        KC_TRANSPARENT,    KC_HASH,           KC_DLR,            KC_LPRN,        KC_RPRN,        KC_GRAVE,
-        KC_ENTER,          KC_PERC,           KC_CIRC,           KC_LBRACKET,    KC_RBRACKET,    KC_TILD,     KC_TRANSPARENT,
-        TO(2),             KC_TRANSPARENT,    KC_TRANSPARENT,    KC_AMPR,        KC_BSLASH,
+        _______,           KC_EXLM,           KC_AT,             KC_LCBR,        KC_RCBR,        KC_PIPE,     _______,
+        _______,           KC_HASH,           KC_DLR,            KC_LPRN,        KC_RPRN,        KC_GRAVE,
+        OSM(MOD_LSFT),     KC_PERC,           KC_CIRC,           KC_LBRACKET,    KC_RBRACKET,    KC_TILD,     _______,
+        _______,           _______,           _______,           KC_AMPR,        KC_BSLASH,
 
-        KC_TRANSPARENT,    KC_TRANSPARENT,
-        KC_TRANSPARENT,
-        LT(4,KC_SPACE),    TO(0),    KC_TRANSPARENT,
+        _______,           _______,
+        _______,
+        LT(8,KC_SPACE),    TO(0),    _______,
 
         // right hand
-        KC_F7,              KC_F8,             KC_F9,     KC_F10,            KC_F11,            KC_F12,         KC_TRANSPARENT,
-        KC_TRANSPARENT,     KC_HASH,           KC_7,      KC_8,              KC_9,              KC_ASTERISK,    KC_SLASH,
+        KC_F7,              KC_F8,             KC_F9,     KC_F10,            KC_F11,            KC_F12,         _______,
+        _______,            KC_SCLN,           KC_7,      KC_8,              KC_9,              KC_ASTERISK,    KC_SLASH,
         /*...........*/     KC_BSPACE,         KC_4,      KC_5,              KC_6,              KC_PLUS,        KC_MINUS,
-        KC_TRANSPARENT,     KC_AMPR,           KC_1,      KC_2,              KC_3,              KC_EQUAL,       KC_ENTER,
-        KC_0,               KC_COMMA,          KC_DOT,    KC_TRANSPARENT,    KC_TRANSPARENT,
+        _______,            KC_COLN,           KC_1,      KC_2,              KC_3,              KC_EQUAL,       KC_ENTER,
+        KC_0,               KC_COMMA,          KC_DOT,    _______,           _______,
 
-        KC_TRANSPARENT,     KC_TRANSPARENT,
-        KC_TRANSPARENT,
-        KC_TRANSPARENT,     TO(1),             LT(4,KC_SPACE)),
+        _______,            _______,
+        _______,
+        _______,            TO(1),             LT(8,KC_SPACE)),
 
-  [4] = LAYOUT_ergodox(KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_MEDIA_PREV_TRACK,KC_MEDIA_PLAY_PAUSE,KC_MEDIA_NEXT_TRACK,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_MEDIA_REWIND,KC_MEDIA_STOP,KC_MEDIA_FAST_FORWARD,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,KC_AUDIO_VOL_UP,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_MEDIA_PREV_TRACK,KC_MEDIA_PLAY_PAUSE,KC_MEDIA_NEXT_TRACK,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_MEDIA_REWIND,KC_MEDIA_STOP,KC_MEDIA_FAST_FORWARD,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,KC_AUDIO_VOL_UP,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT),
+
+  [4] = LAYOUT_ergodox(   //layer 4 : regex
+       // left hand
+       _______,     _______,     _______,     KC_3,        KC_4,        KC_5,        _______,
+       _______,     _______,     _______,     KC_BSPC,     KC_1,        KC_2,        _______,
+       _______,     KC_HOME,     XXXXXXX,     KC_LEFT,     KC_RGHT,     KC_END,      /*....*/
+       _______,     _______,     _______,     _______,     _______,     _______,     _______,
+       _______,     _______,     _______,     _______,     _______,
+
+                                              _______,      _______,
+                                 /*.....*/    /*....*/      _______,
+                                 KC_SPC,      _______,      _______,
+
+       // right hand
+       _______,      KC_6,        KC_7,        KC_8,        KC_9,        KC_0,        _______,
+       _______,      KC_LCBR,     KC_RCBR,     KC_AMPR,     KC_COLN,     KC_PAST,     KC_SLSH,
+       /*....*/      KC_LPRN,     KC_RPRN,     KC_CIRC,     KC_DLR,      KC_PLUS,     KC_MINS,
+       _______,      KC_LBRC,     KC_RBRC,     KC_COMM,     KC_DOT,      KC_QUES,     KC_EXLM,
+       KC_BSLS,      _______,     _______,     _______,     _______,
+
+       _______,     _______,
+       _______,     /*....*/      /*.....*/
+       _______,     _______,      KC_SPC),
+
+  [8] = LAYOUT_ergodox(
+_______,     _______,             _______,                 _______,                   _______,                   _______,     _______,
+_______,     _______,             KC_MEDIA_PREV_TRACK,     KC_MEDIA_PLAY_PAUSE,       KC_MEDIA_NEXT_TRACK,       _______,     _______,
+_______,     _______,             KC_MEDIA_REWIND,         KC_MEDIA_STOP,             KC_MEDIA_FAST_FORWARD,     _______,
+_______,     _______,             KC_AUDIO_VOL_DOWN,       KC_AUDIO_MUTE,             KC_AUDIO_VOL_UP,           _______,     _______,
+_______,     _______,             _______,                 _______,                   _______,
+
+_______,     _______,
+_______,
+_______,     _______,             _______,
+
+// right hand
+_______,     _______,             _______,                 _______,                   _______,                   _______,     _______,
+_______,     _______,             KC_MEDIA_PREV_TRACK,     KC_MEDIA_PLAY_PAUSE,       KC_MEDIA_NEXT_TRACK,       _______,     _______,
+_______,     KC_MEDIA_REWIND,     KC_MEDIA_STOP,           KC_MEDIA_FAST_FORWARD,     _______,                   _______,
+_______,     _______,             KC_AUDIO_VOL_DOWN,       KC_AUDIO_MUTE,             KC_AUDIO_VOL_UP,           _______,     _______,
+_______,     _______,             _______,                 _______,                   _______,
+
+_______,     _______,
+_______,
+_______,     _______,             _______),
 
 };
 
