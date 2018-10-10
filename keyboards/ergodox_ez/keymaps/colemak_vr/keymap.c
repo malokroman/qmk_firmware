@@ -27,11 +27,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT_ergodox(   //layer 0 : default, colemak
        // left hand
-       KC_ESC,              KC_1,            KC_2,            KC_3,              KC_4,               KC_5,          _______,
+       KC_F13,              KC_1,            KC_2,            KC_3,              KC_4,               KC_5,          _______,
        KC_TAB,              KC_Q,            KC_W,            KC_F,              KC_P,               KC_G,          _______,
-       OSM(MOD_LCTL),       KC_A,            LT(4,KC_R),      LT(2,KC_S),        LT(3,KC_T),         LT(3,KC_D),    /*...........*/
-       OSM(MOD_LSFT),       CTL_T(KC_Z),     KC_X,            KC_C,              KC_V,               KC_B,          _______,
-       OSL(2),              OSM(MOD_MEH),    OSM(MOD_HYPR),    OSM(MOD_LALT),    OSM(MOD_LGUI),
+       KC_LCTL,             KC_A,            LT(1,KC_R),      LT(2,KC_S),        LT(3,KC_T),         LT(3,KC_D),    /*...........*/
+       KC_LSFT,             CTL_T(KC_Z),     KC_X,            KC_C,              KC_V,               KC_B,          _______,
+       OSL(2),              KC_HYPR,         KC_MEH,          KC_LCAG,           KC_LALT,
 
                                                       _______,                  _______,
                                  /*.....*/            /*...........*/           _______,
@@ -41,84 +41,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        _______,           _______,          LCTL(KC_DOWN),         LCTL(KC_LEFT),         LCTL(KC_RIGHT),    LCTL(KC_UP),          _______,
        _______,           KC_J,             KC_L,                  KC_U,                  KC_Y,              KC_SCOLON,            KC_BSLASH,
        /*...........*/    LT(3,KC_H),       LT(3,KC_N),            LT(2,KC_E),            KC_I,              KC_O,                 RCTL_T(KC_QUOTE),
-       _______,           KC_K,             KC_M,                  KC_COMMA,              KC_DOT,            RCTL_T(KC_SLASH),     OSM(MOD_LSFT),
-       OSM(MOD_LGUI),     OSM(MOD_LALT),    OSM(MOD_HYPR),         OSM(MOD_MEH),          OSL(3),
+       _______,           KC_K,             KC_M,                  KC_COMMA,              KC_DOT,            RCTL_T(KC_SLASH),     KC_RSFT,
+       KC_RALT,           KC_LCAG,          KC_MEH,                KC_HYPR,               OSL(3),
 
        _______,                  _______,
-       _______,                  /*...........*/           /*.....*/
-       RGUI(RCTL(KC_SPACE)),     KC_ENT,           KC_SPACE),
+       _______,                  /*...*/           /*.............*/
+       RGUI(RCTL(KC_SPACE)),     KC_ENT,           GUI_T(KC_SPACE)),
 
-  [1] = LAYOUT_ergodox(   //layer 1 : qwerty
-        // left hand
-        _______,             KC_1,            KC_2,            KC_3,              KC_4,               KC_5,          _______,
-        _______,             KC_Q,            KC_W,            KC_E,              KC_R,               KC_T,          _______,
-        _______,             KC_A,            LT(4,KC_S),      LT(2,KC_D),        LT(3,KC_F),         LT(3,KC_G),    /*...........*/
-        _______,             CTL_T(KC_Z),     KC_X,            KC_C,              KC_V,               KC_B,          _______,
-        OSL(2),              _______,         _______,         _______,           _______,
-
-                                                 _______,            _______,
-                                  /*.....*/      /*..........*/      _______,
-                                  _______,       _______,            _______,
-
-        // right hand
-        _______,           KC_6,             KC_7,                  KC_8,                  KC_9,                KC_0,                KC_MINUS,
-        _______,           KC_Y,             KC_U,                  KC_I,                  KC_O,                KC_P,                KC_BSLASH,
-        /*...........*/    LT(3,KC_H),       LT(3,KC_J),            LT(2,KC_K),            KC_L,                KC_SCOLON,           RCTL_T(KC_QUOTE),
-        _______,           KC_N,             KC_M,                  KC_COMMA,              KC_DOT,              RCTL_T(KC_SLASH),    OSM(MOD_LSFT),
-        _______,           _______,          _______,               _______,               OSM(3),
-
-        _______,           _______,
-        _______,           /*...........*/    /*....*/
-        _______,           _______,           _______),
-
-  [2] = LAYOUT_ergodox(   //layer 2 : navigation
-        // left hand
-        _______,           LCTL(KC_LEFT),       LCTL(LSFT(KC_TAB)),      KC_MS_BTN3,             LCTL(KC_TAB),      LCTL(KC_RIGHT),        _______,
-        _______,           KC_MS_WH_DOWN,       KC_MS_BTN1,              KC_MS_UP,               KC_MS_BTN2,        KC_MS_WH_UP,           _______,
-        _______,           KC_MS_WH_LEFT,       KC_MS_LEFT,              KC_MS_DOWN,             KC_MS_RIGHT,       KC_MS_WH_RIGHT,        /*...........*/
-        LSFT(KC_ENTER),    XXXXXXX,             KC_MS_ACCEL0,            KC_MS_ACCEL1,           KC_MS_ACCEL2,      XXXXXXX,               _______,
-        _______,           _______,             LGUI(KC_T),              LGUI(KC_W),             LGUI(LSFT(KC_T)),
-
-                                                  _______,           _______,
-                                                                     _______,
-                                    KC_ESCAPE,    TO(0),             _______,
-
-        // right hand
-        _______,           _______,             LCTL(KC_DOWN),    LCTL(KC_LEFT),         LCTL(KC_RIGHT),    LCTL(KC_UP),       _______,
-        LGUI(KC_C),        XXXXXXX,             KC_WWW_BACK,      LCTL(LSFT(KC_TAB)),    LCTL(KC_TAB),      KC_WWW_FORWARD,    _______,
-        /*.......*/        KC_BSPACE,           KC_LEFT,          KC_DOWN,               KC_UP,             KC_RIGHT,          _______,
-        LGUI(KC_V),        XXXXXXX,             KC_HOME,          KC_PGDOWN,             KC_PGUP,           KC_END,            OSM(MOD_LSFT),
-        _______,           _______,             _______,          _______,               _______,
-
-        _______,           _______,
-        _______,
-        _______,           TO(1),             KC_ENTER),
-
-  [3] = LAYOUT_ergodox(
-        // left hand
-        KC_ESCAPE,         KC_F1,             KC_F2,             KC_F3,          KC_F4,          KC_F5,       KC_F6,
-        _______,           KC_EXLM,           KC_AT,             KC_LCBR,        KC_RCBR,        KC_PIPE,     _______,
-        _______,           KC_HASH,           KC_DLR,            KC_LPRN,        KC_RPRN,        KC_GRAVE,
-        OSM(MOD_LSFT),     KC_PERC,           KC_CIRC,           KC_LBRACKET,    KC_RBRACKET,    KC_TILD,     _______,
-        _______,           _______,           _______,           KC_AMPR,        KC_BSLASH,
-
-        _______,           _______,
-        _______,
-        LT(8,KC_SPACE),    TO(0),    _______,
-
-        // right hand
-        KC_F7,              KC_F8,             KC_F9,     KC_F10,            KC_F11,            KC_F12,         _______,
-        _______,            KC_SCLN,           KC_7,      KC_8,              KC_9,              KC_ASTERISK,    KC_SLASH,
-        /*...........*/     KC_BSPACE,         KC_4,      KC_5,              KC_6,              KC_PLUS,        KC_MINUS,
-        _______,            KC_COLN,           KC_1,      KC_2,              KC_3,              KC_EQUAL,       KC_ENTER,
-        KC_0,               KC_COMMA,          KC_DOT,    _______,           _______,
-
-        _______,            _______,
-        _______,
-        _______,            TO(1),             LT(8,KC_SPACE)),
-
-
-  [4] = LAYOUT_ergodox(   //layer 4 : regex
+  [1] = LAYOUT_ergodox(   //layer 1 : regex
        // left hand
        _______,     _______,     _______,     KC_3,        KC_4,        KC_5,        _______,
        _______,     _______,     _______,     KC_BSPC,     KC_1,        KC_2,        _______,
@@ -141,27 +71,73 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        _______,     /*....*/      /*.....*/
        _______,     _______,      KC_SPC),
 
+  [2] = LAYOUT_ergodox(   //layer 2 : navigation
+        // left hand
+        _______,           LCTL(KC_LEFT),       LCTL(LSFT(KC_TAB)),      KC_MS_BTN3,             LCTL(KC_TAB),      LCTL(KC_RIGHT),        _______,
+        _______,           KC_MS_WH_DOWN,       KC_MS_BTN1,              KC_MS_UP,               KC_MS_BTN2,        KC_MS_WH_UP,           _______,
+        _______,           KC_MS_WH_RIGHT,      KC_MS_LEFT,              KC_MS_DOWN,             KC_MS_RIGHT,       KC_MS_WH_LEFT,         /*...........*/
+        LSFT(KC_ENT),      XXXXXXX,             KC_MS_ACCEL0,            KC_MS_ACCEL1,           KC_MS_ACCEL2,      XXXXXXX,               _______,
+        OSL(2),            _______,             LGUI(KC_T),              LGUI(KC_W),             SGUI(KC_T),
+
+                                                  _______,           _______,
+                                                                     _______,
+                                    KC_ESCAPE,    TO(0),             _______,
+
+        // right hand
+        _______,           XXXXXXX,             LCTL(KC_DOWN),    LCTL(KC_LEFT),         LCTL(KC_RIGHT),    LCTL(KC_UP),       _______,
+        LGUI(KC_C),        XXXXXXX,             KC_WWW_BACK,      LCTL(LSFT(KC_TAB)),    LCTL(KC_TAB),      KC_WWW_FORWARD,    _______,
+        /*.......*/        KC_BSPACE,           KC_LEFT,          KC_DOWN,               KC_UP,             KC_RIGHT,          _______,
+        LGUI(KC_V),        XXXXXXX,             KC_HOME,          KC_PGDOWN,             KC_PGUP,           KC_END,            OSM(MOD_LSFT),
+        _______,           _______,             _______,          _______,               OSM(3),
+
+        _______,           _______,
+        _______,
+        _______,           TO(0),             KC_ENT),
+
+  [3] = LAYOUT_ergodox(
+        // left hand
+        KC_ESCAPE,         KC_F1,             KC_F2,             KC_F3,          KC_F4,          KC_F5,       KC_F6,
+        _______,           KC_EXLM,           KC_AT,             KC_LCBR,        KC_RCBR,        KC_PIPE,     _______,
+        _______,           KC_HASH,           KC_DLR,            KC_LPRN,        KC_RPRN,        KC_GRAVE,
+        OSM(MOD_LSFT),     KC_PERC,           KC_CIRC,           KC_LBRACKET,    KC_RBRACKET,    KC_TILD,     _______,
+        _______,           _______,           _______,           KC_AMPR,        KC_BSLASH,
+
+        _______,           _______,
+        _______,
+        _______,           TO(0),             _______,
+
+        // right hand
+        KC_F7,              KC_F8,             KC_F9,      KC_F10,             KC_F11,             KC_F12,         _______,
+        _______,            KC_SCLN,           KC_P7,      KC_P8,              KC_P9,              KC_PAST,        KC_PSLS,
+        /*...........*/     KC_BSPACE,         KC_P4,      KC_P5,              KC_P6,              KC_PPLS,        KC_MINUS,
+        _______,            KC_COLN,           KC_P1,      KC_P2,              KC_P3,              KC_PEQL,        KC_ENT,
+        KC_P0,               KC_PCMM,          KC_PDOT,    _______,           _______,
+
+        _______,            _______,
+        _______,
+        _______,            MO(8),             _______),
+
   [8] = LAYOUT_ergodox(
-_______,     _______,             _______,                 _______,                   _______,                   _______,     _______,
-_______,     _______,             KC_MEDIA_PREV_TRACK,     KC_MEDIA_PLAY_PAUSE,       KC_MEDIA_NEXT_TRACK,       _______,     _______,
-_______,     _______,             KC_MEDIA_REWIND,         KC_MEDIA_STOP,             KC_MEDIA_FAST_FORWARD,     _______,
-_______,     _______,             KC_AUDIO_VOL_DOWN,       KC_AUDIO_MUTE,             KC_AUDIO_VOL_UP,           _______,     _______,
-_______,     _______,             _______,                 _______,                   _______,
+        _______,     _______,             _______,                 _______,                   _______,                   _______,     _______,
+        _______,     _______,             KC_MEDIA_PREV_TRACK,     KC_MEDIA_PLAY_PAUSE,       KC_MEDIA_NEXT_TRACK,       _______,     _______,
+        _______,     _______,             KC_MEDIA_REWIND,         KC_MEDIA_STOP,             KC_MEDIA_FAST_FORWARD,     _______,
+        _______,     _______,             KC_AUDIO_VOL_DOWN,       KC_AUDIO_MUTE,             KC_AUDIO_VOL_UP,           _______,     _______,
+        _______,     _______,             _______,                 _______,                   _______,
 
-_______,     _______,
-_______,
-_______,     _______,             _______,
+        _______,     _______,
+        _______,
+        _______,     _______,             _______,
 
-// right hand
-_______,     _______,             _______,                 _______,                   _______,                   _______,     _______,
-_______,     _______,             KC_MEDIA_PREV_TRACK,     KC_MEDIA_PLAY_PAUSE,       KC_MEDIA_NEXT_TRACK,       _______,     _______,
-_______,     KC_MEDIA_REWIND,     KC_MEDIA_STOP,           KC_MEDIA_FAST_FORWARD,     _______,                   _______,
-_______,     _______,             KC_AUDIO_VOL_DOWN,       KC_AUDIO_MUTE,             KC_AUDIO_VOL_UP,           _______,     _______,
-_______,     _______,             _______,                 _______,                   _______,
+        // right hand
+        _______,     _______,             _______,                 _______,                   _______,                   _______,     _______,
+        _______,     _______,             KC_MEDIA_PREV_TRACK,     KC_MEDIA_PLAY_PAUSE,       KC_MEDIA_NEXT_TRACK,       _______,     _______,
+        _______,     KC_MEDIA_REWIND,     KC_MEDIA_STOP,           KC_MEDIA_FAST_FORWARD,     _______,                   _______,
+        _______,     _______,             KC_AUDIO_VOL_DOWN,       KC_AUDIO_MUTE,             KC_AUDIO_VOL_UP,           _______,     _______,
+        _______,     _______,             _______,                 _______,                   _______,
 
-_______,     _______,
-_______,
-_______,     _______,             _______),
+        _______,     _______,
+        _______,
+        _______,     _______,             _______),
 
 };
 
