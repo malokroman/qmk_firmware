@@ -27,21 +27,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT_ergodox(   //layer 0 : default, colemak
        // left hand
-       KC_F13,              KC_1,            KC_2,            KC_3,              KC_4,               KC_5,          _______,
-       KC_TAB,              KC_Q,            KC_W,            KC_F,              KC_P,               KC_G,          _______,
+       KC_F13,              KC_1,            KC_2,            KC_3,              KC_4,               KC_5,          SGUI(KC_3),
+       KC_TAB,              KC_Q,            KC_W,            KC_F,              KC_P,               KC_G,          SGUI(KC_4),
        KC_LCTL,             KC_A,            LT(1,KC_R),      LT(2,KC_S),        LT(3,KC_T),         LT(3,KC_D),    /*...........*/
-       KC_LSFT,             CTL_T(KC_Z),     KC_X,            KC_C,              KC_V,               KC_B,          _______,
+       KC_LSFT,             KC_Z,            KC_X,            KC_C,              KC_V,               KC_B,          _______,
        OSL(2),              KC_HYPR,         KC_MEH,          KC_LCAG,           KC_LALT,
 
                                                       _______,                  _______,
-                                 /*.....*/            /*...........*/           _______,
+                                 /*.....*/            /*....*/                  _______,
                                  GUI_T(KC_SPACE),     KC_BSPC,                  LGUI(LCTL(KC_SPACE)),
 
        // right hand
        _______,           _______,          LCTL(KC_DOWN),         LCTL(KC_LEFT),         LCTL(KC_RIGHT),    LCTL(KC_UP),          _______,
        _______,           KC_J,             KC_L,                  KC_U,                  KC_Y,              KC_SCOLON,            KC_BSLASH,
        /*...........*/    LT(3,KC_H),       LT(3,KC_N),            LT(2,KC_E),            KC_I,              KC_O,                 RCTL_T(KC_QUOTE),
-       _______,           KC_K,             KC_M,                  KC_COMMA,              KC_DOT,            RCTL_T(KC_SLASH),     KC_RSFT,
+       _______,           KC_K,             KC_M,                  KC_COMMA,              KC_DOT,            RCTL_T(KC_SLASH),     KC_LSFT,
        KC_RALT,           KC_LCAG,          KC_MEH,                KC_HYPR,               OSL(3),
 
        _______,                  _______,
@@ -73,11 +73,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_ergodox(   //layer 2 : navigation
         // left hand
+        _______,           XXXXXXX,             KC_MS_ACCEL0,            KC_MS_ACCEL1,           KC_MS_ACCEL2,      XXXXXXX,               _______,
         _______,           LCTL(KC_LEFT),       LCTL(LSFT(KC_TAB)),      KC_MS_BTN3,             LCTL(KC_TAB),      LCTL(KC_RIGHT),        _______,
-        _______,           KC_MS_WH_DOWN,       KC_MS_BTN1,              KC_MS_UP,               KC_MS_BTN2,        KC_MS_WH_UP,           _______,
-        _______,           KC_MS_WH_RIGHT,      KC_MS_LEFT,              KC_MS_DOWN,             KC_MS_RIGHT,       KC_MS_WH_LEFT,         /*...........*/
-        LSFT(KC_ENT),      XXXXXXX,             KC_MS_ACCEL0,            KC_MS_ACCEL1,           KC_MS_ACCEL2,      XXXXXXX,               _______,
-        OSL(2),            _______,             LGUI(KC_T),              LGUI(KC_W),             SGUI(KC_T),
+        _______,           KC_MS_WH_DOWN,       KC_MS_BTN1,              KC_MS_UP,               KC_MS_BTN2,        KC_MS_WH_UP,           /*....*/
+        LSFT(KC_ENT),      KC_MS_WH_RIGHT,      KC_MS_LEFT,              KC_MS_DOWN,             KC_MS_RIGHT,       KC_MS_WH_LEFT,         _______,
+        TO(0),             _______,             LGUI(KC_T),              LGUI(KC_W),             SGUI(KC_T),
 
                                                   _______,           _______,
                                                                      _______,
@@ -87,8 +87,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,           XXXXXXX,             LCTL(KC_DOWN),    LCTL(KC_LEFT),         LCTL(KC_RIGHT),    LCTL(KC_UP),       _______,
         LGUI(KC_C),        XXXXXXX,             KC_WWW_BACK,      LCTL(LSFT(KC_TAB)),    LCTL(KC_TAB),      KC_WWW_FORWARD,    _______,
         /*.......*/        KC_BSPACE,           KC_LEFT,          KC_DOWN,               KC_UP,             KC_RIGHT,          _______,
-        LGUI(KC_V),        XXXXXXX,             KC_HOME,          KC_PGDOWN,             KC_PGUP,           KC_END,            OSM(MOD_LSFT),
-        _______,           _______,             _______,          _______,               OSM(3),
+        LGUI(KC_V),        XXXXXXX,             KC_HOME,          KC_PGDOWN,             KC_PGUP,           KC_END,            KC_LSFT,
+        _______,           _______,             _______,          _______,               TO(3),
 
         _______,           _______,
         _______,
@@ -99,8 +99,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESCAPE,         KC_F1,             KC_F2,             KC_F3,          KC_F4,          KC_F5,       KC_F6,
         _______,           KC_EXLM,           KC_AT,             KC_LCBR,        KC_RCBR,        KC_PIPE,     _______,
         _______,           KC_HASH,           KC_DLR,            KC_LPRN,        KC_RPRN,        KC_GRAVE,
-        OSM(MOD_LSFT),     KC_PERC,           KC_CIRC,           KC_LBRACKET,    KC_RBRACKET,    KC_TILD,     _______,
-        _______,           _______,           _______,           KC_AMPR,        KC_BSLASH,
+        KC_LSFT,           KC_PERC,           KC_CIRC,           KC_LBRACKET,    KC_RBRACKET,    KC_TILD,     _______,
+        TO(2),             _______,           _______,           KC_AMPR,        KC_BSLASH,
 
         _______,           _______,
         _______,
@@ -111,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,            KC_SCLN,           KC_P7,      KC_P8,              KC_P9,              KC_PAST,        KC_PSLS,
         /*...........*/     KC_BSPACE,         KC_P4,      KC_P5,              KC_P6,              KC_PPLS,        KC_MINUS,
         _______,            KC_COLN,           KC_P1,      KC_P2,              KC_P3,              KC_PEQL,        KC_ENT,
-        KC_P0,               KC_PCMM,          KC_PDOT,    _______,           _______,
+        KC_P0,              KC_COMM,           KC_PDOT,    _______,            TO(0), 
 
         _______,            _______,
         _______,
