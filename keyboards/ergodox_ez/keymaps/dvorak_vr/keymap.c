@@ -31,22 +31,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TAB,              KC_QUOTE,        KC_COMMA,        KC_DOT,            KC_P,               KC_Y,          SGUI(KC_4),
        KC_LCTL,             KC_A,            LT(1,KC_O),      LT(2,KC_E),        LT(3,KC_U),         LT(3,KC_I),    /*...........*/
        KC_LSFT,             KC_SCLN,         KC_Q,            KC_J,              KC_K,               KC_X,          _______,
-       XXXXXXX,             KC_HYPR,         KC_MEH,          KC_LCAG,           KC_LALT,
+       KC_CAPS,             KC_HYPR,         KC_MEH,          KC_LCAG,           KC_LALT,
 
-                                                      _______,                  LCTL(KC_LEFT),
-                                 /*.....*/            /*....*/                  LCTL(KC_TAB),
-                                 GUI_T(KC_SPACE),     LALT(KC_F1),              S(LCTL(KC_TAB)),
+                                                      _______,                  LCTL(KC_TAB),
+                                 /*.....*/            /*....*/                  S(LCTL(KC_TAB)),
+                                 GUI_T(KC_SPACE),     LALT(KC_F1),              LCTL(KC_LEFT),
 
        // right hand
        _______,           _______,          LCTL(KC_DOWN),         LCTL(KC_LEFT),         LCTL(KC_RIGHT),    LCTL(KC_UP),          _______,
        LCTL(KC_F1),       KC_F,             KC_G,                  KC_C,                  KC_R,              KC_L,                 KC_SLSH,
        /*....*/           LT(3,KC_D),       LT(3,KC_H),            LT(2,KC_T),            KC_N,              KC_S,                 RCTL_T(KC_MINS),
        LALT(KC_F1),       KC_B,             KC_M,                  KC_W,                  KC_V,              RCTL_T(KC_Z),         KC_LSFT,
-       KC_RGUI,           KC_LCAG,          KC_MEH,                KC_HYPR,               XXXXXXX,
+       KC_RGUI,           KC_LCAG,          KC_MEH,                KC_HYPR,               KC_CAPS,
 
-       LCTL(KC_RIGHT),             _______,
-       LCTL(KC_UP),                /*...*/           /*.............*/
-       LGUI(KC_GRAVE),             LALT(KC_F1),      ALT_T(KC_SPACE)),
+       LCTL(KC_UP),                _______,
+       LGUI(KC_GRAVE),             /*...*/           /*.............*/
+       LCTL(KC_RIGHT),             LALT(KC_F1),      ALT_T(KC_SPACE)),
 
   [1] = LAYOUT_ergodox(   //layer 1 : regex
        // left hand
