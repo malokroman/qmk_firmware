@@ -31,11 +31,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TAB,              KC_QUOTE,        KC_COMMA,        KC_DOT,            KC_P,               KC_Y,          SGUI(KC_4),
        KC_LCTL,             KC_A,            LT(1,KC_O),      LT(2,KC_E),        LT(3,KC_U),         LT(3,KC_I),    /*...........*/
        KC_LSFT,             KC_SCLN,         KC_Q,            KC_J,              KC_K,               KC_X,          _______,
-       KC_CAPS,             KC_HYPR,         KC_MEH,          KC_LCAG,           KC_LALT,
+       KC_ESC,             KC_HYPR,         KC_MEH,          KC_LCAG,           KC_LALT,
 
                                                       _______,                  LCTL(KC_TAB),
                                  /*.....*/            /*....*/                  S(LCTL(KC_TAB)),
-                                 GUI_T(KC_SPACE),     LALT(KC_F1),              LCTL(KC_LEFT),
+                                 ALT_T(KC_SPACE),     LALT(KC_F1),              LCTL(KC_LEFT),
 
        // right hand
        _______,           _______,          LCTL(KC_DOWN),         LCTL(KC_LEFT),         LCTL(KC_RIGHT),    LCTL(KC_UP),          _______,
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
        LCTL(KC_UP),                _______,
        LGUI(KC_GRAVE),             /*...*/           /*.............*/
-       LCTL(KC_RIGHT),             LALT(KC_F1),      ALT_T(KC_SPACE)),
+       LCTL(KC_RIGHT),             LALT(KC_F1),      GUI_T(KC_ENT)),
 
   [1] = LAYOUT_ergodox(   //layer 1 : regex
        // left hand
