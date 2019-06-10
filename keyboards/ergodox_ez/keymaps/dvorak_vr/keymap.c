@@ -19,13 +19,20 @@ enum custom_keycodes {
 
 };
 
+enum custom_layers {
+_DVORAK,
+_REGEX,
+_MOVE,
+_NUM,
+}
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
 
-  [0] = LAYOUT_ergodox(   //layer 0 : default, dvorak
+  [_DVORAK] = LAYOUT_ergodox(   //layer 0 : default, dvorak
        // left hand
        KC_F13,              KC_1,            KC_2,            KC_3,              KC_4,               KC_5,          SGUI(KC_3),
        KC_TAB,              KC_QUOTE,        KC_COMMA,        KC_DOT,            KC_P,               KC_Y,          SGUI(KC_4),
@@ -48,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        LGUI(KC_GRAVE),             /*...*/           /*.............*/
        LCTL(KC_RIGHT),             LALT(KC_F1),      GUI_T(KC_ENT)),
 
-  [1] = LAYOUT_ergodox(   //layer 1 : regex
+  [_REGEX] = LAYOUT_ergodox(   //layer 1 : regex
        // left hand
        _______,     _______,     _______,     KC_3,        KC_4,            KC_5,        _______,
        _______,     _______,     _______,     KC_0,        KC_1,            KC_9,        _______,
@@ -71,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        _______,     /*....*/      /*.....*/
        _______,     _______,      KC_SPC),
 
-  [2] = LAYOUT_ergodox(   //layer 2 : navigation
+  [_MOVE] = LAYOUT_ergodox(   //layer 2 : navigation
         // left hand
         _______,           XXXXXXX,             KC_MS_ACCEL0,            KC_MS_ACCEL1,           KC_MS_ACCEL2,      XXXXXXX,               _______,
         _______,           LCTL(KC_LEFT),       KC_MS_BTN1,              KC_MS_BTN3,             KC_MS_BTN2,        LCTL(KC_RIGHT),        _______,
@@ -94,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,
         _______,           _______,             KC_ESCAPE),
 
-  [3] = LAYOUT_ergodox(
+  [_NUM] = LAYOUT_ergodox(
         // left hand
         KC_ESCAPE,         KC_F1,             KC_F2,             KC_F3,          KC_F4,          KC_F5,       KC_F6,
         _______,           KC_EXLM,           KC_AT,             KC_LCBR,        KC_RCBR,        KC_PIPE,     _______,
